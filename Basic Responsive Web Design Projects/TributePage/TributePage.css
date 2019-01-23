@@ -1,8 +1,64 @@
 body {
     background-color: rgb(207, 207, 207);
+    font-family: Arial, Helvetica, sans-serif
 }
 
-h1 {
+#main {
     text-align: center;
+    margin: auto;
+    padding: 5px 100px 5px 100px;
+    background-color: rgb(224, 224, 224);
+}
+
+#title {
     color: rgb(73, 73, 73);
+}
+
+#subtitle-div {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding: 5px 0px 5px 0px;
+
+}
+
+#image {
+    max-width: 25%;
+    display: block;
+    height: auto;
+    margin: auto;
+}
+
+#img-caption {
+    padding: 10px 0px 20px 0px;
+}
+
+#tribute-info {
+    background-color: rgb(202, 202, 202);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+ul {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+li {
+    margin: 10px;
+}
+
+#quote {
+    margin: 20px 100px 20px 100px;
+}
+
+#tribute-link {
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
