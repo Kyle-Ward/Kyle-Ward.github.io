@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Survey Form Project</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="SurveyForm.css" />
+</head>
+
+<body>
+    <h1 id="title">Test Survey Form</h1>
+    <div id="inside-form">
+        <p id="description">Please fill out the form below to let us know how we can improve our website.</p>
+        <form id="survey-form" method="GET">
+            <div class="left-tab">
+                <div class="labels">
+                    <label id="name-label" for="name">* Name: </label>
+                </div>
+                <div class="right-tab">
+                    <input type="text" name="name" id="name" class="input-field" placeholder="Enter your name"
+                        autofocus required>
+                </div>
+            </div>
+            <div class="left-tab">
+                <div class="labels">
+                    <label id="email-label" for="email">* E-mail: </label>
+                </div>
+                <div class="right-tab">
+                    <input type="email" name="email" id="email" class="input-field" placeholder="Enter your email"
+                        required>
+                </div>
+            </div>
+            <div class="left-tab">
+                <div class="labels">
+                    <label id="number-label" for="age">* Age: </label>
+                </div>
+                <div class="right-tab">
+                    <input type="number" name="age" id="number" class="input-field" placeholder="Enter your age" min="1"
+                        max="99" required>
+                </div>
+            </div>
+            <div class="left-tab">
+                <div class="labels">
+                    <label id="dropdown-label" for="howFind">How did you find out about us?: </label>
+                </div>
+                <div class="right-tab">
+                    <select id="dropdown" name="howFind">
+                        <option disabled value>Select an option</option>
+                        <option value="google">Google</option>
+                        <option value="social">Social Media</option>
+                        <option value="friend">From a friend</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="left-tab">
+                <div class="labels">
+                    <label id="rating-label" for="ratings">How likely would you be to recommend us to a friend?: </label>
+                </div>
+                <div class="right-tab">
+                    <ul style="list-style: none;">
+                        <li class="radio"><label>Definitely<input name="radio-button" value="1" type="radio" class="ratings"></label></li>
+                        <li class="radio"><label>Maybe<input name="radio-button" value="2" type="radio" class="ratings"></label></li>
+                        <li class="radio"><label>Not at all<input name="radio-button" value="3" type="radio" class="ratings"></label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left-tab">
+                <div class="labels">
+                    <label for="like-most">What do you like about our website? (Check all that apply): </label>
+                </div>
+                <div class="right-tab">
+                    <ul id="like-most" style="list-style: none;">
+                        <li class="check"><label><input name="prefer" value="1" type="checkbox" class="ratings">Ease of use</label></li>
+                        <li class="check"><label><input name="prefer" value="2" type="checkbox" class="ratings">Design</label></li>
+                        <li class="check"><label><input name="prefer" value="3" type="checkbox" class="ratings">Practicality</label></li>
+                        <li class="check"><label><input name="prefer" value="4" type="checkbox" class="ratings">Number of options</label></li>
+                        <li class="check"><label><input name="prefer" value="5" type="checkbox" class="ratings">Thoughtfulness</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left-tab">
+                <div class="labels">
+                    <label for="comments">Any comments or suggestions?</label>
+                </div>
+                <div class="right-tab">
+                    <textarea id="comments" class="input-field" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+            </div>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
