@@ -4,59 +4,121 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Technical Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML &lthead&gt Element Technical Documentation</title>
     <link rel="stylesheet" type="text/css" media="screen" href="techdoc.css" />
 </head>
 
 <body>
     <nav id="navbar">
-        <header id="page-topic"><h3>The HTML <code>&lthead&gt</code> Element Documentation</h3></header>
+        <header id="page-topic">
+            <h3>The HTML <code>&lthead&gt</code> Element Documentation</h3>
+        </header>
         <ul id="topics">
-            <a class="nav-link" href="#introduction" rel="internal"><li>Introduction</li></a>
-            <a class="nav-link" href="#the_title_element" rel="internal"><li>The <code>&lttitle&gt</code> Element</li></a>
-            <a class="nav-link" href="#the_meta_element" rel="internal"><li>The <code>&ltmeta&gt</code> Element</li></a>
-            <a class="nav-link" href="#the_style_element" rel="internal"><li>The <code>&ltstyle&gt</code> Element</li></a>
-            <a class="nav-link" href="#the_link_element" rel="internal"><li>The <code>&ltlink&gt</code> Element</li></a>
-            <a class="nav-link" href="#the_script_element" rel="internal"><li>The <code>&ltscript&gt</code> Element</li></a>
-        </ul>        
+            <a class="nav-link" href="#introduction" rel="internal">
+                <li>Introduction</li>
+            </a>
+            <a class="nav-link" href="#the_title_element" rel="internal">
+                <li>The <code>&lttitle&gt</code> Element</li>
+            </a>
+            <a class="nav-link" href="#the_meta_element" rel="internal">
+                <li>The <code>&ltmeta&gt</code> Element</li>
+            </a>
+            <a class="nav-link" href="#the_style_element" rel="internal">
+                <li>The <code>&ltstyle&gt</code> Element</li>
+            </a>
+            <a class="nav-link" href="#the_link_element" rel="internal">
+                <li>The <code>&ltlink&gt</code> Element</li>
+            </a>
+            <a class="nav-link" href="#the_script_element" rel="internal">
+                <li>The <code>&ltscript&gt</code> Element</li>
+            </a>
+        </ul>
     </nav>
     <main id="main-doc">
         <section class="main-section" id="introduction">
             <header class="section-header">Introduction</header>
             <article>
-
+                <p>The HTML <code>&lthead&gt</code> element contains metadata about the HTML document.</p>
+                <p>This metadata is not displayed on the webpage, but instead provides the browser with various types
+                    of background information.</p>
+                <p>Metadata usually consists of the document title, character set, styles, links, and scripts.</p>
+                <p>The following information provides brief explanations of some of the more common elements used
+                    within the HTML <code>&lthead&gt</code> element.</p>
             </article>
         </section>
         <section class="main-section" id="the_title_element">
             <header class="section-header">The <code>&lttitle&gt</code> Element</header>
             <article>
-
+                <p>The <code>&lttitle&gt</code> element specifies what the document is titled and is a requirement for
+                    all HTML docs.</p>
+                <p>The contents of the <code>&lttitle&gt</code> element do the following:</p>
+                <ul>
+                    <li>creates a title in the tab of the browser</li>
+                    <li>provides a title for the page when it is added to bookmarks</li>
+                    <li>provides a title for search engine results</li>
+                </ul>
             </article>
         </section>
         <section class="main-section" id="the_meta_element">
             <header class="section-header">The <code>&ltmeta&gt</code> Element</header>
             <article>
-
+                <p>The <code>&ltmeta&gt</code> element describes the character set used in the document, keywords,
+                    author, page description, and other metadata.</p>
+                <p>Examples of these main uses of the <code>&ltmeta&gt</code> element are below:</p>
+                <p>To define the files character set:</p>
+                <code>&ltmeta charset="UTF-8"&gt</code>
+                <p>To create keywords for search engines:</p>
+                <code>&ltmeta name="keywords" content="HTML, meta, CSS, Javascript"&gt</code>
+                <p>To designate the author of the page"</p>
+                <code>&ltmeta name="author" content="John Doe"&gt</code>
+                <p>To provide a description of the page:</p>
+                <code>&ltmeta name="description" content="HTML meta element explanation"&gt</code>
             </article>
         </section>
         <section class="main-section" id="the_style_element">
             <header class="section-header">The <code>&ltstyle&gt</code> Element</header>
             <article>
-
+                <p>The <code>&ltstyle&gt</code> element is used to create CSS styling within the HTML file itself.</p>
+                <p>This prevents the need to link to a separate, standalone CSS file, but it also only defines the
+                    styling for the individual HTML document in which it exists.</p>
+                <p>Here is an example of the <code>&ltstyle&gt</code> element:</p>
+                <code>&ltstyle&gt</code>
+                <br>
+                <code style="margin-left: 20px;">body {font-family: helvetica;}</code>
+                <br>
+                <code style="margin-left: 20px;">p {color: blue;}</code>
+                <br>
+                <code style="margin-left: 20px;">h1 {font-size: 20px;}</code>
+                <br>
+                <code>&lt/style&gt</code>
             </article>
         </section>
         <section class="main-section" id="the_link_element">
             <header class="section-header">The <code>&ltlink&gt</code> Element</header>
             <article>
+                <p>The <code>&ltlink&gt</code> element is used to connect a CSS file to the HTML file for styling the
+                    webpage.</p>
+                <p>This can be helpful when you want multiple webpages to have the same overall style.</p>
+                <p>To achieve this, instead of using the <code>&ltstyle&gt</code> element to input the styling in every
+                    HTML file, you can simply create one standalone CSS file and link it to each HTML file you want to
+                    style.</p>
+                <p>Here is an example of how the <code>&ltlink&gt</code> element is formatted:</p>
+                <code>&ltlink rel="stylesheet" href="style.css"&gt</code>
             </article>
         </section>
         <section class="main-section" id="the_script_element">
             <header class="section-header">The <code>&ltscript&gt</code> Element</header>
             <article>
-
+                <p>The <code>&ltscript&gt</code> element is used to provide JavaScript functionality to the webpage.</p>
+                <p>This can be done by writing the JavaScript directly within the <code>&ltscript&gt</code> element or,
+                    more commonly, by linking to an external JavaScript file.</p>
+                <p>Here is an example of how to link to an external JavaScript file using the <code>&ltscript&gt</code>
+                    element:</p>
+                <code>&ltscript src="myScript.js"&gt&lt/script&gt</code>
             </article>
         </section>
     </main>
 </body>
+
 </html>
