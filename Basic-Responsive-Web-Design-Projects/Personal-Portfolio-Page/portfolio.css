@@ -4,3 +4,86 @@ body {
     background-color: rgb(44, 44, 44);
     color: rgb(194, 194, 194);
 }
+
+#navbar {
+    width: 100%;
+}
+#nav-links {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.navlink {
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    background-color: rgb(194, 194, 194);
+    border-radius: 10%;
+    color: rgb(44, 44, 44);
+}
+
+.navlink:hover {
+    background-color: rgb(85, 85, 85);
+    color: rgb(194, 194, 194);
+}
+
+#welcome-section {
+    top: 0;
+    min-height: 55vh;
+    padding-top: 45vh;
+}
+
+#projects {
+    background-color: rgb(194, 194, 194);
+    color: rgb(44, 44, 44);
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.project-tile {
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+    border: 2px solid rgb(44, 44, 44);
+    height: 220px;
+    width: 280px;
+    margin: 40px 100px;
+    background-color: rgb(44, 44, 44);
+}
+
+.project-pic {
+    width: 100%;
+    height: 180px;
+}
+
+.project-title {
+    color: rgb(194, 194, 194);
+    margin-top: 7px;
+}
+
+#contact {
+    top: 0;
+    min-height: 55vh;
+    padding-top: 45vh;
+}
+
+#contact-header {
+    margin-bottom: 60px;
+    margin-top:-20px;
+}
+
+.contact-link {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 18px;
+    margin: 20px;
+    background-color: rgb(194, 194, 194);
+    color: rgb(44, 44, 44);
+    border-radius: 10%;
+}
+
+.contact-link:hover {
+    background-color: rgb(85, 85, 85);
+    color: rgb(194, 194, 194);
+}
