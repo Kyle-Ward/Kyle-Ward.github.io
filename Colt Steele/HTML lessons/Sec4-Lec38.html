@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forms Exercise</title>
+</head>
+
+<body>
+
+    <h1>Register</h1>
+
+    <form>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" placeholder="John" required>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" type="text" placeholder="Smith" required>
+
+        <br>
+
+        <label for="male">Male:</label>
+        <input id="male" type="radio" name="sex" value="male">
+        <label for="female">Female:</label>
+        <input id="famale" type="radio" name="sex" value="female">
+        <label for="other">Other:</label>
+        <input id="other" type="radio" name="sex" value="other">
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" required>
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="password" minlength="5" maxlength="10" required>
+
+        <br>
+
+        <label for="birthday">Birthday:</label>
+        <select id="birthday" name="month">
+            <option>Month</option>
+            <option value="jan">Jan</option>
+            <option value="feb">Feb</option>
+            <option value="mar">Mar</option>
+        </select>
+        <select id="birthday" name="day">
+            <option>Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <select id="birthday" name="year">
+            <option>Year</option>
+            <option value="1985">1985</option>
+            <option value="1985">1986</option>
+            <option value="1985">1987</option>
+        </select>
+
+        <br>
+
+        <label for="agree">I agree to the terms and conditions:</label>
+        <input id="agree" type="checkbox">
+
+        <br>
+
+        <input id="submit" type="submit">
+
+    </form>
+
+</body>
+</html>
