@@ -18,3 +18,46 @@ body {
 .navbar-inverse .navbar-brand {
     color: white;
 }
+
+.image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.image1 {
+    background-image: url(https://source.unsplash.com/WBhy9Mgewbk);
+}
+
+.image2 {
+    background-image: url(https://source.unsplash.com/5aXEo-hGwU0);
+}
+
+.image3 {
+    background-image: url(https://source.unsplash.com/h0xg3Auzu5o);
+}
+
+.image4 {
+    background-image: url(https://source.unsplash.com/Ru6hBXxVph8);
+}
+
+.image5 {
+    background-image: url(https://source.unsplash.com/B1Zyw7sdm5w);
+}
+
+.image6 {
+    background-image: url(https://source.unsplash.com/Cny5kzA3mEU);
+}
+
+.image7 {
+    background-image: url(https://source.unsplash.com/Fj1YrTXNodk);
+}
+
+.image8 {
+    background-image: url(https://source.unsplash.com/0iOOw41DZ28);
+}
+
+.image9 {
+    background-image: url(https://source.unsplash.com/p7mo8-CG5Gs);
+}
