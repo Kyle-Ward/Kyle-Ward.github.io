@@ -1,6 +1,6 @@
 // reference type - objects (incl arrays) are reference type, not primitive type (like numbers, strings, booleans, null, undefined, Symbol). Reference types always refer to a specific place in the memory of the computer. When two identical objects are compared it will return false because they point to different areas in the memory, not the same area.
 let object1 = { value: 10 };
-let object2 = object 1;
+let object2 = object1;
 let object3 = { value: 10 };
 
 object1 === object2 // returns true
