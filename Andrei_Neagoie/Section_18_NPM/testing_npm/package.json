@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Kyle-Ward/Learning/issues"
   },
-  "homepage": "https://github.com/Kyle-Ward/Learning#readme"
+  "homepage": "https://github.com/Kyle-Ward/Learning#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }
