@@ -1,0 +1,19 @@
+{
+  "name": "testing_npm",
+  "version": "1.0.0",
+  "description": "Learning npm",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyle-Ward/Learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kyle-Ward/Learning/issues"
+  },
+  "homepage": "https://github.com/Kyle-Ward/Learning#readme"
+}
