@@ -60,6 +60,6 @@ const getData = async function() {
   } catch(err) {
     console.log("oops", err);
   }
-};
+}
 
 // with asyn await, to catch errors we must wrap the function in try{} and then have catch(err) after the try{} brackets.
