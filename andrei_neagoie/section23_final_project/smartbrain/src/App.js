@@ -10,7 +10,7 @@ import Signin from "./components/signin/Signin";
 import Registration from "./components/registration/Registration";
 import "./App.css";
 
-//face recog api key
+//Clarifai api key
 const app = new Clarifai.App({
   apiKey: "09aa1d934a7446af87feca8a72f9faff"
 });
@@ -60,12 +60,12 @@ class App extends Component {
     this.setState({ box: box });
   };
 
-  //grabs url from input form
+  //sets input state to text input url
   onInputChange = event => {
     this.setState({ input: event.target.value });
   };
 
-  //sends url through api and returns face location in box: state
+  //sends url through api, returns face location object and sets it to box state
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
     app.models
