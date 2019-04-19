@@ -4,12 +4,16 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon expressServer.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.11"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
   }
 }
