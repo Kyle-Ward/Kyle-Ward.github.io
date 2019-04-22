@@ -26,7 +26,7 @@ const database = {
 };
 
 app.get("/", (req, res) => {
-  res.send("This is working");
+  res.send(database.users);
 });
 
 app.post("/signin", (req, res) => {
@@ -50,6 +50,7 @@ app.post("/register", (req, res) => {
     entries: 0,
     joined: new Date()
   });
+  res.json(database.users[database.users.length - 1]);
 });
 
 app.listen(3000, () => {
