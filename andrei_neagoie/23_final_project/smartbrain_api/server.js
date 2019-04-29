@@ -66,17 +66,30 @@ app.post("/signin", (req, res) => {
 //REGISTER
 app.post("/register", (req, res) => {
   const { email, name, password } = req.body;
-  db("users")
-    .returning("*")
-    .insert({
-      email: email,
-      name: name,
-      joined: new Date()
-    })
-    .then(user => {
-      res.json(user[0]);
-    })
-    .catch(err => res.status(400).json("Unable to register."));
+  const hash = bcrypt.hashSync(password);
+  db.transaction(trx => {
+    trx
+      .insert({
+        hash: hash,
+        email: email
+      })
+      .into("login")
+      .returning("email")
+      .then(loginEmail => {
+        return trx("users")
+          .returning("*")
+          .insert({
+            email: loginEmail[0],
+            name: name,
+            joined: new Date()
+          })
+          .then(user => {
+            res.json(user[0]);
+          });
+      })
+      .then(trx.commit)
+      .catch(trx.rollback);
+  }).catch(err => res.status(400).json("Unable to register."));
 });
 
 //PROFILE
@@ -107,14 +120,6 @@ app.put("/image", (req, res) => {
     })
     .catch(err => res.status(400).json("Unable to get entires."));
 });
-
-// // Load hash from your password DB.
-// bcrypt.compare("bacon", hash, function(err, res) {
-//   // res == true
-// });
-// bcrypt.compare("veggies", hash, function(err, res) {
-//   // res = false
-// });
 
 app.listen(3000, () => {
   console.log("app is running on port 3000");
