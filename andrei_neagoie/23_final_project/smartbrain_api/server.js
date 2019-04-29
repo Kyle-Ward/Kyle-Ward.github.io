@@ -2,6 +2,23 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt-nodejs");
 const cors = require("cors");
+const knew = require("knex");
+
+const db = knew({
+  client: "pg",
+  connection: {
+    host: "127.0.0.1",
+    user: "postgres",
+    password: "Stella0619",
+    database: "smartbrain"
+  }
+});
+
+db.select("*")
+  .from("users")
+  .then(data => {
+    console.log(data);
+  });
 
 const app = express();
 app.use(bodyParser.json());
@@ -55,14 +72,17 @@ app.post("/signin", (req, res) => {
 //REGISTER
 app.post("/register", (req, res) => {
   const { email, name, password } = req.body;
-  database.users.push({
-    id: "125",
-    name: name,
-    email: email,
-    entries: 0,
-    joined: new Date()
-  });
-  res.json(database.users[database.users.length - 1]);
+  db("users")
+    .returning("*")
+    .insert({
+      email: email,
+      name: name,
+      joined: new Date()
+    })
+    .then(user => {
+      res.json(user[0]);
+    })
+    .catch(err => res.status(400).json("Unable to register."));
 });
 
 //PROFILE
@@ -95,8 +115,6 @@ app.put("/image", (req, res) => {
     res.status(404).json("not found");
   }
 });
-
-
 
 // // Load hash from your password DB.
 // bcrypt.compare("bacon", hash, function(err, res) {
