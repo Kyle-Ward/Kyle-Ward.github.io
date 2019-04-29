@@ -14,12 +14,6 @@ const db = knew({
   }
 });
 
-db.select("*")
-  .from("users")
-  .then(data => {
-    console.log(data);
-  });
-
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -104,17 +98,14 @@ app.get("/profile/:id", (req, res) => {
 //# of Images done
 app.put("/image", (req, res) => {
   const { id } = req.body;
-  let found = false;
-  database.users.forEach(user => {
-    if (user.id === id) {
-      found = true;
-      user.entries++;
-      return res.json(user.entries);
-    }
-  });
-  if (!found) {
-    res.status(404).json("not found");
-  }
+  db("users")
+    .where("id", "=", id)
+    .increment("entries", 1)
+    .returning("entries")
+    .then(entries => {
+      res.json(entries[0]);
+    })
+    .catch(err => res.status(400).json("Unable to get entires."));
 });
 
 // // Load hash from your password DB.
