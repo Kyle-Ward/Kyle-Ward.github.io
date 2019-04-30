@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Clarifai from "clarifai";
 import Particles from "react-particles-js";
 import Navigation from "./components/navigation/Navigation";
 import Logo from "./components/logo/Logo";
@@ -9,11 +8,6 @@ import FaceRecognition from "./components/facerecognition/FaceRecognition";
 import Signin from "./components/signin/Signin";
 import Registration from "./components/registration/Registration";
 import "./App.css";
-
-//Clarifai api key
-const app = new Clarifai.App({
-  apiKey: "09aa1d934a7446af87feca8a72f9faff"
-});
 
 //options for particle background style
 const particlesOptions = {
@@ -89,8 +83,14 @@ class App extends Component {
   //sends url through api, returns face location object and sets it to box state
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    app.models
-      .predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
+    fetch("http://localhost:3000/imageurl", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        input: this.state.input
+      })
+    })
+      .then(response => response.json())
       .then(response => {
         if (response) {
           fetch("http://localhost:3000/image", {
