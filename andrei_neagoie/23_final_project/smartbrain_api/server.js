@@ -12,10 +12,8 @@ const image = require("./controllers/image");
 const db = knew({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
-    user: "postgres",
-    password: "Stella0619",
-    database: "smartbrain"
+    connectionString: process.env.DATABASE_URL,
+    ssl: true
   }
 });
 
