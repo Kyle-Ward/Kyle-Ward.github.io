@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function EpisodesList(props) {
-  const { episodes, toggleFavAction, favorites } = props;
+  const { episodes, toggleFavAction, favorites, state } = props;
 
   return episodes.map(episode => {
     return (
@@ -15,7 +15,7 @@ export default function EpisodesList(props) {
           <div>
             Season: {episode.season} Number: {episode.number}
           </div>
-          <button type="button" onClick={() => toggleFavAction(episode)}>
+          <button type="button" onClick={() => toggleFavAction(episode, state.state, state.dispatch)}>
             {favorites.find(fav => fav.id === episode.id) ? "Unfav" : "Fav"}
           </button>
         </section>
